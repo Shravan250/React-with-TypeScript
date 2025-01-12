@@ -1,0 +1,23 @@
+.root {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 239, 239);
+  transition: background-color 1s linear;
+  border: 1px solid black;
+}
+
+.root:hover {
+  background-color: lightgrey;
+}
+
+.cross {
+  font-size: 25px;
+  font-weight: 500;
+  background-color: lightgreen;
+}
+
+.circle {
+  font-size: 25px;
+  font-weight: 500;
+  background-color: yellow;
+}
