@@ -2,8 +2,6 @@
 
 This is a simple yet engaging implementation of the classic **Tic Tac Toe** game, developed using **React** and **TypeScript**. The game includes a clean UI, state management for game progression, and a "Time Travel" feature to revisit earlier game states.
 
-![Tic Tac Toe](./src/assets/tic-tac-toe.gif)
-
 ## Features
 
 - **Interactive Gameplay**: Play Tic Tac Toe with a dynamic interface.
