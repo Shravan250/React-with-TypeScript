@@ -1,50 +1,64 @@
-# React + TypeScript + Vite
+# Tic Tac Toe - React with TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple yet engaging implementation of the classic **Tic Tac Toe** game, developed using **React** and **TypeScript**. The game includes a clean UI, state management for game progression, and a "Time Travel" feature to revisit earlier game states.
 
-Currently, two official plugins are available:
+![Tic Tac Toe](./src/assets/tic-tac-toe.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Interactive Gameplay**: Play Tic Tac Toe with a dynamic interface.
+- **Next Player Indicator**: Shows whose turn it is (X or O).
+- **Time Travel Button**: Allows players to go back to the start of the game.
+- **Responsive Design**: Optimized for desktop and mobile screens.
+- **TypeScript Integration**: Strong typing for reliability and maintainability.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+   ```bash
+   git clone https://github.com/Shravan250/React-with-TypeScript.git
+   cd React-with-TypeScript/tictactoe
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3.Start the development server:
+
+```bash
+npm start
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## How to Play
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Click on any square to make your move.
+2. The game alternates turns between Player X and Player O.
+3. Use the **"Time Travel" button** to reset the game to the initial state.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## Technologies Used
+
+- **React**: Frontend library for building the UI.
+- **TypeScript**: For type safety and code maintainability.
+- **Tailwind CSS**: Utility-first framework for styling.
+- **CSS**: Styling the components and layout.
+- **Node.js** and **npm**: Package management and local server setup.
+
+---
+
+## Preview
+
+The following animation demonstrates the game in action:
+
+![Preview](./src/assets/tic-tac-toe.gif)
+
+---
+
+## Contributing
+
+Feel free to submit issues or fork the project to contribute. Pull requests are always welcome!
