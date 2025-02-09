@@ -4,6 +4,9 @@ import Basic from "./components/Basic";
 import Main from "./components/AdminInfo/Main";
 import Todo from "./components/Todo/Todo";
 import Form from "./components/Form/Form";
+import CountBuffer from "./components/ContextState/CountBuffer";
+import CounterReducer from "./components/Reducer/CountReducer";
+import FetchData from "./components/Fetching/FetchData";
 
 const App = () => {
   return (
@@ -14,7 +17,10 @@ const App = () => {
       </Basic> */}
       {/* <Main /> */}
       {/* <Todo /> */}
-      <Form />
+      {/* <Form /> */}
+      {/* <CountBuffer /> */}
+      {/* <CounterReducer /> */}
+      <FetchData />
     </div>
   );
 };
