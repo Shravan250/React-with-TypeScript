@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Table.module.css";
 import Button from "../Button/Button";
 import calcWinner from "../Logic";

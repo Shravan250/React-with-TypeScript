@@ -6,7 +6,7 @@ interface Props {
   // Define your props here
 }
 
-const Game: React.FC<Props> = (props) => {
+const Game: React.FC<Props> = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const currentButtons = history[currentMove];
@@ -23,7 +23,7 @@ const Game: React.FC<Props> = (props) => {
     setCurrentMove(nextMove);
   }
 
-  const moves = history.map((buttons, move) => {
+  const moves = history.map((_, move) => {
     let description;
     if (move > 0) {
       description = "Go to move #" + move;
