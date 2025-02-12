@@ -34,3 +34,47 @@ export const useRecipe = create<RecipeStore>((set) => ({
       recipes: state.recipes.filter((recipe) => recipe.id !== id),
     })),
 }));
+
+interface Expense {
+  id: number;
+  description: string;
+  amount: number;
+}
+
+interface ExpenseTrackerStore {
+  expenses: Expense[];
+  addExpense: (expense: Expense) => void;
+  removeExpense: (id: number) => void;
+}
+
+export const useExpenseTracker = create<ExpenseTrackerStore>((set) => ({
+  expenses: [],
+  addExpense: (expense) =>
+    set((state) => ({ expenses: [...state.expenses, expense] })),
+  removeExpense: (id) =>
+    set((state) => ({
+      expenses: state.expenses.filter((expense) => {
+        expense.id !== id;
+      }),
+    })),
+}));
+
+interface Meal {
+  idMeal: string;
+  strMeal: string;
+  strMealThumb: string;
+}
+
+interface MealsStore {
+  meals: Meal[];
+  searchQuery: string;
+  setMeals: (meal: Meal[]) => void;
+  setSearchQuery: (query: string) => void;
+}
+
+export const useMeals = create<MealsStore>((set) => ({
+  meals: [],
+  searchQuery: "",
+  setMeals: (meals: Meal[]) => set({ meals }),
+  setSearchQuery: (query: string) => set({ searchQuery: query }),
+}));
