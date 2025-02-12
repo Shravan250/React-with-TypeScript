@@ -7,6 +7,9 @@ import Form from "./components/Form/Form";
 import CountBuffer from "./components/ContextState/CountBuffer";
 import CounterReducer from "./components/Reducer/CountReducer";
 import FetchData from "./components/Fetching/FetchData";
+import Loader from "./components/Loader";
+import Varients from "./components/Varients";
+import Card from "./components/Animations/Card";
 
 const App = () => {
   return (
@@ -20,7 +23,10 @@ const App = () => {
       {/* <Form /> */}
       {/* <CountBuffer /> */}
       {/* <CounterReducer /> */}
-      <FetchData />
+      {/* <FetchData /> */}
+      {/* <Loader /> */}
+      {/* <Varients /> */}
+      <Card />
     </div>
   );
 };
