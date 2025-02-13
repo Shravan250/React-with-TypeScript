@@ -1,9 +1,10 @@
 import React from "react";
+import FormBuilder from "./components/FormBuilder/FormBuilder";
 
 const App = () => {
   return (
     <div>
-      <></>
+      <FormBuilder />
     </div>
   );
 };

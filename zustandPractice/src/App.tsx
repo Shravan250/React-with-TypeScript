@@ -3,6 +3,7 @@ import Counter from "./components/Counter/Counter";
 import RecipeBook from "./components/RecipeBook/RecipeBook";
 import ExpanceTracker from "./components/ExpenseTracker/ExpanceTracker";
 import Meals from "./components/Meals/Meals";
+import FormBuilder from "./components/Form Builder/FormBuilder";
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
       {/* <Counter /> */}
       {/* {<RecipeBook />} */}
       {/* <ExpanceTracker /> */}
-      <Meals />
+      {/* <Meals /> */}
+      <FormBuilder />
     </div>
   );
 };

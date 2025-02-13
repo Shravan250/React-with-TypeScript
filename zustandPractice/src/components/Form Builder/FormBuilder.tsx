@@ -2,29 +2,23 @@ import React, { ChangeEvent, useState } from "react";
 import { useFormStore } from "../../store";
 import FormField from "./FormField";
 
-interface NewField {
+interface Field {
   label: string;
   type: "text" | "number" | "password" | "textarea" | "date" | "file";
   value: string;
 }
-
 const FormBuilder = () => {
-  const {
-    formFields,
-    addFormField,
-    removeFormField,
-    updateFormField,
-    resetFormField,
-  } = useFormStore();
+  const { formFields, addField, removeField, resetFields, updateField } =
+    useFormStore();
 
-  const [newField, setNewField] = useState<NewField>({
+  const [newField, setNewField] = useState<Field>({
     label: "",
     type: "text",
     value: "",
   });
 
   const handleAddField = () => {
-    addFormField(newField);
+    addField(newField);
     setNewField({ label: "", type: "text", value: "" });
   };
 
@@ -74,7 +68,7 @@ const FormBuilder = () => {
           </button>
           <button
             type="button"
-            onClick={resetFormField}
+            onClick={resetFields}
             className="flex-1 bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition-colors"
           >
             Reset Form
@@ -87,8 +81,8 @@ const FormBuilder = () => {
             key={index}
             field={field}
             index={index}
-            onUpdate={updateFormField}
-            onRemove={removeFormField}
+            onUpdate={updateField}
+            onRemove={removeField}
           />
         ))}
       </form>

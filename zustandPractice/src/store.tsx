@@ -78,3 +78,34 @@ export const useMeals = create<MealsStore>((set) => ({
   setMeals: (meals: Meal[]) => set({ meals }),
   setSearchQuery: (query: string) => set({ searchQuery: query }),
 }));
+
+interface FormField {
+  label: string;
+  type: "text" | "number" | "password" | "textarea" | "date" | "file";
+  value: string;
+}
+
+interface FormFieldStore {
+  formFields: FormField[];
+  addField: (field: FormField) => void;
+  removeField: (index: number) => void;
+  updateField: (index: number, updateField: FormField) => void;
+  resetFields: () => void;
+}
+
+export const useFormStore = create<FormFieldStore>((set) => ({
+  formFields: [],
+  addField: (field) =>
+    set((state) => ({ formFields: [...state.formFields, field] })),
+  removeField: (index) =>
+    set((state) => ({
+      formFields: state.formFields.filter((_, i) => i !== index),
+    })),
+  updateField: (index, updateField) =>
+    set((state) => ({
+      formFields: state.formFields.map((field, i) =>
+        i === index ? updateField : field
+      ),
+    })),
+  resetFields: () => set({ formFields: [] }),
+}));
